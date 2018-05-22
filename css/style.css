@@ -1,0 +1,257 @@
+/*
+Theme Name: JES Web Dev
+Theme URI: https://jeswebdev.com
+Author: Jesse Sugden
+Author URI: https://jeswebdev.com
+Description: Template for Jesse Sugden Web Development page
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: jeswebdev
+*/
+
+
+/*Navbar --------------------------------------------------------------------*/
+
+.navbar {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+#brand {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.nav-link {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#contactLink {
+  margin-right: 50px;
+}
+
+.nav-item {
+  border: 2px;
+  color: black;
+}
+
+li.menu-item a {
+	color: white !important;
+	padding: 7px !important;
+}
+/*Showcase----------------------------------------------------------------------*/
+
+.showcase {
+  height: 600px;
+  text-align: center;
+  margin-bottom: 30px;
+  background: url('http://jeswebdevelopment.com/wp-content/uploads/2017/12/mountain.jpeg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bigText {
+  padding-top: 150px;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+}
+
+.midText {
+  font-family: 'Cinzel', serif;
+}
+
+/*Card columns--------------------------------------------------------------------*/
+
+.col-sm {
+  /*text-align: center;*/
+}
+
+.centerCol {
+  text-align: center;
+}
+
+.icon {
+  width: 35px;
+  margin-bottom: 10px;
+}
+
+
+.folioPrev {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.btnCentre {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.skills {
+  padding-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#emailForm {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#emailSubmit {
+  margin-bottom: 15px;
+}
+
+.bgDark {
+  border-top: 30px;
+}
+
+.footNav {
+  padding-right: 30px;
+}
+
+footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/*Button formatting------------------------------------------------------- */
+
+/*links---------------------- */
+.button {
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+#button1 {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+#button2 {
+    width: 85px;
+    margin-bottom: 15px;
+}
+
+
+.icon:hover, .folioPrev:hover
+{
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+
+/*Blog Formatting -------------------------------------------------------*/
+
+.post-thumb img {
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.post-thumb {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+
+label {
+  margin-left: 5px;
+  margin-right: 40px;
+}
+
+h1 {
+  font-size: 46px !important;
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  font-family: 'Cinzel', serif;
+
+    /* background: radial-gradient(#5f6a76, #798695, #798695); */
+}
+
+.profilePic {
+  float: right;
+
+}
+
+@media only screen and (max-width: 1200px){
+  .showcase{
+    height: 400px;
+  }
+  .bigText {
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .showcase{
+    height: 300px;
+  }
+  .bigText {
+    padding-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 630px){
+  .showcase{
+    height: 240px;
+  }
+  .bigText {
+    padding-top: 40px;
+  }
+  .icon {
+    visibility: hidden;
+  }
+}
+
+
+img.workImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 3px;
+  -webkit-box-shadow: 3px 10px 6px -6px #4e5a67;
+  -moz-box-shadow: 3px 10px 6px -6px #4e5a67;
+  box-shadow: 3px 10px 6px -6px #4e5a67;
+}
+
+
+.blog-post-title {
+
+}
+
+hr {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.attachment-post-thumbnail {
+  width:100%;
+  height: auto;
+}
+
+.jumbotron {
+  /* background: linear-gradient(141deg, #7b8998 0%, #717e8c 51%, #5b6774 75%); */
+  margin-bottom: 3px;
+}
