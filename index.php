@@ -3,13 +3,10 @@
       <div class="row">
         <div class="col-sm"></div>
         <div class="jumbotron bg-light blog-main">
-              <h1><?php
-                wp_title()
-              ?>
-             </h1>
+              <h1>Blog</h1>
           <?php if(have_posts()) : ?>
             <?php while(have_posts()) : the_post(); ?>
-              <?php get_template_part('content', get_post_format()); ?>
+              <?php get_template_part('archive', get_post_format()); ?>
           <?php endwhile; ?>
         <?php else : ?>
           <p><?php __('No Posts Found'); ?></p>

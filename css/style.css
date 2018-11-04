@@ -10,6 +10,44 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: jeswebdev
 */
 
+body {
+  color: white;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.body-bg {
+  background: url('https://jeswebdevelopment.com/wp-content/uploads/2017/12/mountain.jpeg');
+  background-attachment: fixed;
+}
+
+.bg-light {
+  background-color: #578384 !important;
+  background-image: linear-gradient(135deg, #578384 0%, #3a4951 100%);
+}
+
+a {
+  color: white !important;
+}
+
+.blue-a {
+  color: #a1e0f3 !important;
+}
+
+.folioPrevCol {
+  height: 250px;
+  /* overflow: hidden; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hideme {
+  opacity: 0;
+}
+
+.wp-block-image figcaption {
+  color: white;
+}
 
 /*Navbar --------------------------------------------------------------------*/
 
@@ -42,25 +80,32 @@ li.menu-item a {
 	color: white !important;
 	padding: 7px !important;
 }
+
 /*Showcase----------------------------------------------------------------------*/
 
 .showcase {
   height: 600px;
   text-align: center;
   margin-bottom: 30px;
-  background: url('http://jeswebdevelopment.com/wp-content/uploads/2017/12/mountain.jpeg');
+  background: url('https://jeswebdevelopment.com/wp-content/uploads/2017/12/mountain.jpeg');
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 .bigText {
-  padding-top: 150px;
+  padding-top: 135px;
   font-family: 'Cinzel', serif;
-  font-weight: bold;
+  /* font-weight: bold; */
+  letter-spacing: 2px;
 }
 
 .midText {
   font-family: 'Cinzel', serif;
+}
+
+.txt-type > .txt {
+  border-right: 0.1rem solid #888888;
+  width: 50px;
 }
 
 /*Card columns--------------------------------------------------------------------*/
@@ -82,8 +127,6 @@ li.menu-item a {
 .folioPrev {
   width: 100%;
   height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .btnCentre {
@@ -119,6 +162,18 @@ footer {
   padding-bottom: 25px;
 }
 
+.social-link {
+  -moz-transition:color .2s ease-in;
+  -o-transition:color .2s ease-in;
+  -webkit-transition:color .2s ease-in;
+  padding: 0px 10px;
+}
+
+.social-link:hover {
+  color: #73ACA5 !important;
+  text-decoration: none;
+}
+
 /*Button formatting------------------------------------------------------- */
 
 /*links---------------------- */
@@ -134,7 +189,8 @@ footer {
 
 #button1 {
     width: 150px;
-    margin-bottom: 15px;
+    margin: 15px;
+    border: 1px solid black;
 }
 
 #button2 {
@@ -146,21 +202,28 @@ footer {
 .icon:hover, .folioPrev:hover
 {
     z-index: 2;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.1);
+    -webkit-transition: all 800ms ease-in;
+    -webkit-transform: scale(1.02);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.1);
+    -ms-transform: scale(1.02);
     -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.1);
+    -moz-transform: scale(1.02);
     transition: all 200ms ease-in;
-    transform: scale(1.1);
+    transform: scale(1.02);
+}
+
+.icon, .folioPrev {
+	-webkit-transition: all .8s ease-in-out;
+	-moz-transition: all .8s ease-in-out;
+	-o-transition: all .8s ease-in-out;
+	-ms-transition: all .8s ease-in-out;
 }
 
 
 /*Blog Formatting -------------------------------------------------------*/
 
 .post-thumb img {
-  width: 400px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
 }
@@ -168,8 +231,31 @@ footer {
 .post-thumb {
   text-align: center;
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 
+.post-thumb-single {
+  display: flex;
+  justify-content: center;
+}
+
+.post-thumb-single img {
+  width: 60%;
+  height: 60%;
+}
+
+
+.entry {
+  padding: 0px 15px;
+}
+
+.img-pd {
+  padding: 20px 0px;
+}
+
+.img-pd img {
+  height: auto;
+}
 
 label {
   margin-left: 5px;
@@ -187,12 +273,24 @@ h1 {
     /* background: radial-gradient(#5f6a76, #798695, #798695); */
 }
 
-.profilePic {
-  float: right;
-
+.pd-tb {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 1200px){
+.profilePic {
+  float: right;
+  margin: 15px;
+  border-radius: 2px;
+}
+
+@media only screen and (min-width: 1200px){
+  .showcase {
+    background-position-y: -100px;
+  }
+}
+
+@media only screen and (max-width: 1400px){
   .showcase{
     height: 400px;
   }
@@ -208,17 +306,32 @@ h1 {
   .bigText {
     padding-top: 60px;
   }
+  .folioPrevCol {
+    height: 160px;
+  }
 }
 
 @media only screen and (max-width: 630px){
   .showcase{
-    height: 240px;
+    height: auto;
+    padding: 5px;
   }
   .bigText {
-    padding-top: 40px;
+    padding-top: 5px;
+    font-size: 25px;
   }
-  .icon {
-    visibility: hidden;
+  .midText {
+    font-size: 20px;
+  }
+  .hide-mobile {
+    display: none;
+  }
+  h1 {
+    font-size: 35px !important;
+  }
+  .post-thumb-single img {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -254,4 +367,63 @@ hr {
 .jumbotron {
   /* background: linear-gradient(141deg, #7b8998 0%, #717e8c 51%, #5b6774 75%); */
   margin-bottom: 3px;
+}
+
+/* 404 Page */
+
+#error-header{
+  margin-top: 50px;
+}
+
+#error-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  width: 32%;
+  height: auto;
+}
+
+/* Whatsapp proposal page */
+
+.pd-left {
+  padding-left: 35px;
+}
+
+.package-col {
+  border: 1px solid white;
+  padding: 10px;
+  margin: 5px;
+}
+
+.package-col:hover {
+  background: rgba(0,0,0, 0.06);
+}
+
+
+
+@media only screen and (max-width: 700px){
+  .wp-block-columns {
+    flex-direction: column;
+  }
+}
+
+#breadcrumbs {
+  font-size: 13px;
+}
+
+#_hj-f5b2a1eb-9b07_feedback ._hj-f5b2a1eb-9b07_feedback_minimized_label ._hj-f5b2a1eb-9b07_icon_emotion_default .path1:before {
+  color: white !important;
+}
+
+.prev-alignleft,
+.next-alignright {
+  width: 50%;
+  float: left;
+}
+
+.prev-alignleft a,
+.next-alignright a {
+  color: #a1e0f3 !important;
 }

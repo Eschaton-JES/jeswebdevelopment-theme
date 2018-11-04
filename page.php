@@ -7,7 +7,7 @@
           <?php while(have_posts()) : the_post(); ?>
               <div class="blog-post">
                 <h1 class="blog-post-title">
-                  <?php wp_title(''); ?>
+                  <?php the_title(''); ?>
                 </h1>
                 <hr />
                 <p><?php the_content(); ?></p>

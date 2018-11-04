@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
+    <meta charset="<?php bloginfo('charset'); ?>">
         <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119551464-1"></script>
     <script>
@@ -10,22 +11,14 @@
 
       gtag('config', 'UA-119551464-1');
     </script>
-    <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="<?php bloginfo('description') ?>">
     <title> <?php bloginfo('name'); ?> |
-            <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
+            <?php is_front_page() ? bloginfo('description') : the_title(); ?>
     </title>
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 
-    <script>
-    jQuery( document ).ready()(function() {
-
-
-   })
-    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <?php wp_head(); ?>
 
@@ -34,11 +27,11 @@
 
 <!--------------------------------------------------------------------------------------------->
 
-<body>
+<body <?php if(!is_front_page()) echo 'class="body-bg"';?>>
 
 <!-- Navbar --------------------------------------------------------------->
 <nav id="top" class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="http://jeswebdevelopment.com"><button type="button" id="brand" class="btn btn-info">JES</button></a>
+  <div class="navbar-brand" ><button id="brand" class=" btn btn-info">JES</button></div>
   <?php
    wp_nav_menu( array(
        'menu'              => 'primary',
